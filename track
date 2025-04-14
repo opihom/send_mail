@@ -1,0 +1,16 @@
+# Exemple Flask
+from flask import Flask, request, send_file
+import datetime
+
+app = Flask(__name__)
+
+@app.route('/pixel.gif')
+def tracking_pixel():
+    uid = request.args.get('uid')
+    ip = request.headers.get('X-Forwarded-For', request.remote_addr)
+    user_agent = request.headers.get('User-Agent')
+    timestamp = datetime.datetime.utcnow()
+
+    print(f"[{timestamp}] Pixel chargé par UID={uid}, IP={ip}, UA={user_agent}")
+    
+    return send_file('pixel.gif', mimetype='image/gif')
