@@ -3,7 +3,7 @@ import datetime
 
 app = Flask(__name__)
 
-GOOGLE_SHEETS_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbxjAi_l-Kpj8rHHvwnIN32DZfgTMaq0_G7vQgiHR4ttlGJZaY_DkNCglRVQmLozL6jpOg/exec"
+GOOGLE_SHEETS_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbynAkwNEbSSH7o1Q0it3J2nARSwWLTNXYWFfDmF8k8gcTh6LcUB1bpSQlqDnmv5LFTZKw/exec"
 
 @app.route('/pixel_log.gif')
 def pixel_log():
